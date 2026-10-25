@@ -1,9 +1,10 @@
 -- ==========================================
--- Script: Eilia Menu (Pro UI + ESP) - Horizontal
+-- Script: Eilia Menu (Pro Max)
 -- Developer: Eilia (TG @Saharrmohamed2005)
 -- ==========================================
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
+local UserInputService = game:GetService("UserInputService")
 
 -- الألوان
 local Black = Color3.fromRGB(10, 10, 10)
@@ -38,22 +39,47 @@ local function showSplash()
     splashGui:Destroy()
 end
 
--- 2. بناء القائمة
+-- 2. إشعار التحديث
+local function showUpdateNotification()
+    local notifGui = Instance.new("ScreenGui")
+    notifGui.Name = "EiliaNotif"
+    notifGui.Parent = playerGui
+    
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 300, 0, 50)
+    frame.Position = UDim2.new(0.5, -150, 0, 20)
+    frame.BackgroundColor3 = Black
+    frame.BorderSizePixel = 2
+    frame.BorderColor3 = Purple
+    frame.Parent = notifGui
+    
+    local text = Instance.new("TextLabel")
+    text.Size = UDim2.new(1, 0, 1, 0)
+    text.BackgroundTransparency = 1
+    text.Text = "تم تحديث السكربت وإضافة قفز لانهائي 🔰"
+    text.TextColor3 = White
+    text.Font = Enum.Font.SourceSansBold
+    text.TextSize = 14
+    text.Parent = frame
+    
+    task.wait(5)
+    notifGui:Destroy()
+end
+
+-- 3. بناء القائمة
 local function createMenu()
     local menuGui = Instance.new("ScreenGui")
     menuGui.Name = "EiliaMenu"
     menuGui.Parent = playerGui
 
-    -- الإطار الرئيسي (عريض وقصير)
     local mainFrame = Instance.new("Frame")
-    mainFrame.Size = UDim2.new(0, 650, 0, 250)
-    mainFrame.Position = UDim2.new(0.5, -325, 0.5, -125)
+    mainFrame.Size = UDim2.new(0, 500, 0, 550) -- كبرنا الطول شوية عشان الأزرار
+    mainFrame.Position = UDim2.new(0.5, -250, 0.5, -275)
     mainFrame.BackgroundColor3 = Black
     mainFrame.BorderSizePixel = 2
     mainFrame.BorderColor3 = Purple
     mainFrame.Parent = menuGui
 
-    -- الشريط العلوي
     local topBar = Instance.new("Frame")
     topBar.Size = UDim2.new(1, 0, 0, 35)
     topBar.BackgroundColor3 = Black
@@ -64,7 +90,7 @@ local function createMenu()
     local title = Instance.new("TextLabel")
     title.Size = UDim2.new(1, 0, 1, 0)
     title.BackgroundTransparency = 1
-    title.Text = "Eilia Menu | Pro (Horizontal)"
+    title.Text = "Eilia Menu | Pro Max"
     title.TextColor3 = Purple
     title.Font = Enum.Font.SourceSansBold
     title.TextSize = 20
@@ -88,43 +114,33 @@ local function createMenu()
     btnMin.Font = Enum.Font.SourceSansBold
     btnMin.Parent = topBar
 
-    -- صفحة التحكم (أفقية)
     local page1 = Instance.new("Frame")
     page1.Size = UDim2.new(1, 0, 1, -35)
     page1.Position = UDim2.new(0, 0, 0, 35)
     page1.BackgroundTransparency = 1
     page1.Parent = mainFrame
 
-    -- دالة إنشاء لوحة تحكم (سرعة أو قفز)
-    local function createControlPanel(name, xPos, defaultVal, isSpeed)
+    local function createControlPanel(name, yPos, defaultVal, isSpeed)
         local container = Instance.new("Frame")
-        container.Size = UDim2.new(0.45, 0, 0, 100)
-        container.Position = UDim2.new(xPos, 0, 0.05, 0)
+        container.Size = UDim2.new(0.9, 0, 0, 70) -- صغرنا الارتفاع
+        container.Position = UDim2.new(0.05, 0, 0, yPos)
         container.BackgroundColor3 = DarkGrey
         container.BorderSizePixel = 1
         container.BorderColor3 = Purple
         container.Parent = page1
 
-        local titleLbl = Instance.new("TextLabel")
-        titleLbl.Size = UDim2.new(1, 0, 0, 20)
-        titleLbl.BackgroundTransparency = 1
-        titleLbl.Text = name
-        titleLbl.TextColor3 = White
-        titleLbl.Font = Enum.Font.SourceSansBold
-        titleLbl.Parent = container
-
         local toggleBtn = Instance.new("TextButton")
-        toggleBtn.Size = UDim2.new(0.3, 0, 0, 30)
-        toggleBtn.Position = UDim2.new(0.05, 0, 0, 30)
+        toggleBtn.Size = UDim2.new(0.35, 0, 0, 30)
+        toggleBtn.Position = UDim2.new(0, 10, 0, 20)
         toggleBtn.BackgroundColor3 = DarkGrey
-        toggleBtn.Text = "[OFF]"
+        toggleBtn.Text = name .. " [OFF]"
         toggleBtn.TextColor3 = White
         toggleBtn.Font = Enum.Font.SourceSansBold
         toggleBtn.Parent = container
 
         local textBox = Instance.new("TextBox")
-        textBox.Size = UDim2.new(0.3, 0, 0, 30)
-        textBox.Position = UDim2.new(0.35, 0, 0, 30)
+        textBox.Size = UDim2.new(0.25, 0, 0, 30)
+        textBox.Position = UDim2.new(0.4, 0, 0, 20)
         textBox.BackgroundColor3 = Black
         textBox.TextColor3 = White
         textBox.Text = tostring(defaultVal)
@@ -134,7 +150,7 @@ local function createMenu()
 
         local applyBtn = Instance.new("TextButton")
         applyBtn.Size = UDim2.new(0.25, 0, 0, 30)
-        applyBtn.Position = UDim2.new(0.7, 0, 0, 30)
+        applyBtn.Position = UDim2.new(0.7, 0, 0, 20)
         applyBtn.BackgroundColor3 = Purple
         applyBtn.Text = "تطبيق"
         applyBtn.TextColor3 = White
@@ -156,11 +172,11 @@ local function createMenu()
         toggleBtn.MouseButton1Click:Connect(function()
             isOn = not isOn
             if isOn then
-                toggleBtn.Text = "[ON]"
+                toggleBtn.Text = name .. " [ON]"
                 toggleBtn.BackgroundColor3 = Purple
                 applyValue()
             else
-                toggleBtn.Text = "[OFF]"
+                toggleBtn.Text = name .. " [OFF]"
                 toggleBtn.BackgroundColor3 = DarkGrey
                 local hum = player.Character and player.Character:FindFirstChild("Humanoid")
                 if hum then
@@ -174,111 +190,97 @@ local function createMenu()
         textBox.FocusLost:Connect(applyValue)
     end
 
-    -- لوحات التحكم (السرعة والقفز)
-    createControlPanel("السرعة", 0.025, 160, true)
-    createControlPanel("القفز", 0.525, 125, false)
+    createControlPanel("السرعة", 10, 160, true)
+    createControlPanel("القفز", 90, 125, false)
 
-    -- لوحة الجاذبية
-    local gravContainer = Instance.new("Frame")
-    gravContainer.Size = UDim2.new(0.95, 0, 0, 100)
-    gravContainer.Position = UDim2.new(0.025, 0, 0.55, 0)
-    gravContainer.BackgroundColor3 = DarkGrey
-    gravContainer.BorderSizePixel = 1
-    gravContainer.BorderColor3 = Purple
-    gravContainer.Parent = page1
+    -- القفز اللانهائي
+    local infJumpContainer = Instance.new("Frame")
+    infJumpContainer.Size = UDim2.new(0.9, 0, 0, 40)
+    infJumpContainer.Position = UDim2.new(0.05, 0, 0, 170)
+    infJumpContainer.BackgroundColor3 = DarkGrey
+    infJumpContainer.BorderSizePixel = 1
+    infJumpContainer.BorderColor3 = Purple
+    infJumpContainer.Parent = page1
+
+    local infJumpBtn = Instance.new("TextButton")
+    infJumpBtn.Size = UDim2.new(1, 0, 1, 0)
+    infJumpBtn.BackgroundTransparency = 1
+    infJumpBtn.Text = "تفعيل القفز اللانهائي [OFF]"
+    infJumpBtn.TextColor3 = White
+    infJumpBtn.Font = Enum.Font.SourceSansBold
+    infJumpBtn.Parent = infJumpContainer
+
+    local infJumpOn = false
+    infJumpBtn.MouseButton1Click:Connect(function()
+        infJumpOn = not infJumpOn
+        if infJumpOn then
+            infJumpBtn.Text = "تفعيل القفز اللانهائي [ON]"
+            infJumpContainer.BackgroundColor3 = Purple
+        else
+            infJumpBtn.Text = "تفعيل القفز اللانهائي [OFF]"
+            infJumpContainer.BackgroundColor3 = DarkGrey
+        end
+    end)
+
+    UserInputService.JumpRequest:Connect(function()
+        if infJumpOn then
+            local hum = player.Character and player.Character:FindFirstChild("Humanoid")
+            if hum then
+                hum:ChangeState(Enum.HumanoidStateType.Jumping)
+            end
+        end
+    end)
+
+    -- الجاذبية
+    local gravityFrame = Instance.new("Frame")
+    gravityFrame.Size = UDim2.new(0.9, 0, 0, 60)
+    gravityFrame.Position = UDim2.new(0.05, 0, 0, 220)
+    gravityFrame.BackgroundColor3 = DarkGrey
+    gravityFrame.BorderSizePixel = 1
+    gravityFrame.BorderColor3 = Purple
+    gravityFrame.Parent = page1
 
     local gravTitle = Instance.new("TextLabel")
     gravTitle.Size = UDim2.new(1, 0, 0, 20)
     gravTitle.BackgroundTransparency = 1
-    gravTitle.Text = "الجاذبية"
+    gravTitle.Text = "تخفيف الجاذبية:"
     gravTitle.TextColor3 = White
     gravTitle.Font = Enum.Font.SourceSansBold
-    gravTitle.Parent = gravContainer
-
-    local gravToggle = Instance.new("TextButton")
-    gravToggle.Size = UDim2.new(0.2, 0, 0, 30)
-    gravToggle.Position = UDim2.new(0.05, 0, 0, 30)
-    gravToggle.BackgroundColor3 = DarkGrey
-    gravToggle.Text = "[OFF]"
-    gravToggle.TextColor3 = White
-    gravToggle.Font = Enum.Font.SourceSansBold
-    gravToggle.Parent = gravContainer
-
-    local gravFrame = Instance.new("Frame")
-    gravFrame.Size = UDim2.new(0.65, 0, 0, 30)
-    gravFrame.Position = UDim2.new(0.3, 0, 0, 30)
-    gravFrame.BackgroundTransparency = 1
-    gravFrame.Parent = gravContainer
+    gravTitle.Parent = gravityFrame
 
     local gravities = {15, 20, 30, 40, 44}
-    local selectedVal = 15
-    local isGravOn = false
-    
-    local gravButtons = {}
     for i, val in ipairs(gravities) do
         local gBtn = Instance.new("TextButton")
-        gBtn.Size = UDim2.new(0.18, 0, 0, 30)
-        gBtn.Position = UDim2.new((i-1) * 0.2, 0, 0, 0)
-        gBtn.BackgroundColor3 = DarkGrey
+        gBtn.Size = UDim2.new(0.18, 0, 0, 25)
+        gBtn.Position = UDim2.new((i-1) * 0.2 + 0.02, 0, 0, 25)
+        gBtn.BackgroundColor3 = Purple
         gBtn.Text = tostring(val) .. "%"
         gBtn.TextColor3 = White
-        gBtn.Font = Enum.Font.SourceSansBold
-        gBtn.Parent = gravFrame
-        gravButtons[i] = gBtn
-        
+        gBtn.Parent = gravityFrame
         gBtn.MouseButton1Click:Connect(function()
-            selectedVal = val
-            for _, b in ipairs(gravButtons) do
-                b.BackgroundColor3 = DarkGrey
-            end
-            gBtn.BackgroundColor3 = Purple
-            if isGravOn then
-                game.Workspace.Gravity = 196.2 * (1 - (selectedVal / 100))
-            end
+            game.Workspace.Gravity = 196.2 * (1 - (val / 100))
         end)
     end
 
-    gravButtons[1].BackgroundColor3 = Purple
-
-    gravToggle.MouseButton1Click:Connect(function()
-        isGravOn = not isGravOn
-        if isGravOn then
-            gravToggle.Text = "[ON]"
-            gravToggle.BackgroundColor3 = Purple
-            game.Workspace.Gravity = 196.2 * (1 - (selectedVal / 100))
-        else
-            gravToggle.Text = "[OFF]"
-            gravToggle.BackgroundColor3 = DarkGrey
-            game.Workspace.Gravity = 196.2
-        end
-    end)
-
-    -- لوحة ESP
-    local espContainer = Instance.new("Frame")
-    espContainer.Size = UDim2.new(0.95, 0, 0, 40)
-    espContainer.Position = UDim2.new(0.025, 0, 0.85, 0)
-    espContainer.BackgroundColor3 = DarkGrey
-    espContainer.BorderSizePixel = 1
-    espContainer.BorderColor3 = Purple
-    espContainer.Parent = page1
-
+    -- الكشف (ESP)
     local espBtn = Instance.new("TextButton")
-    espBtn.Size = UDim2.new(1, 0, 1, 0)
-    espBtn.BackgroundTransparency = 1
+    espBtn.Size = UDim2.new(0.9, 0, 0, 40)
+    espBtn.Position = UDim2.new(0.05, 0, 0, 290)
+    espBtn.BackgroundColor3 = DarkGrey
     espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [OFF]"
     espBtn.TextColor3 = White
     espBtn.Font = Enum.Font.SourceSansBold
-    espBtn.Parent = espContainer
+    espBtn.Parent = page1
 
     local espOn = false
     espBtn.MouseButton1Click:Connect(function()
         espOn = not espOn
         if espOn then
             espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [ON]"
-            espBtn.Parent.BackgroundColor3 = Purple
+            espBtn.BackgroundColor3 = Purple
         else
             espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [OFF]"
-            espBtn.Parent.BackgroundColor3 = DarkGrey
+            espBtn.BackgroundColor3 = DarkGrey
             for _, p in ipairs(game.Players:GetPlayers()) do
                 if p.Character then
                     local hl = p.Character:FindFirstChild("ESP_Highlight")
@@ -308,19 +310,9 @@ local function createMenu()
                                         hl.OutlineColor = Purple
                                         hl.Parent = other.Character
                                     end
-                                    if not other.Character:FindFirstChild("ESP_Box") then
-                                        local box = Instance.new("SelectionBox")
-                                        box.Name = "ESP_Box"
-                                        box.Adornee = otherRoot
-                                        box.Color3 = Purple
-                                        box.LineThickness = 0.1
-                                        box.Parent = other.Character
-                                    end
                                 else
                                     local hl = other.Character:FindFirstChild("ESP_Highlight")
-                                    local box = other.Character:FindFirstChild("ESP_Box")
                                     if hl then hl:Destroy() end
-                                    if box then box:Destroy() end
                                 end
                             end
                         end
@@ -330,24 +322,13 @@ local function createMenu()
         end
     end)
 
-    -- صفحة المعلومات (تحتاج ضغط زر للوصول إليها، بس بما إننا سوينا القائمة عريضة، خلينا نطلعها فوق)
-    local infoBtn = Instance.new("TextButton")
-    infoBtn.Size = UDim2.new(0, 100, 0, 20)
-    infoBtn.Position = UDim2.new(0.5, -50, 1, -25)
-    infoBtn.BackgroundTransparency = 1
-    infoBtn.Text = "معلومات المطور"
-    infoBtn.TextColor3 = Purple
-    infoBtn.Font = Enum.Font.SourceSansBold
-    infoBtn.Parent = mainFrame
-
-    local infoGui = Instance.new("Frame")
-    infoGui.Size = UDim2.new(0, 400, 0, 300)
-    infoGui.Position = UDim2.new(0.5, -200, 0.5, -150)
-    infoGui.BackgroundColor3 = Black
-    infoGui.BorderSizePixel = 2
-    infoGui.BorderColor3 = Purple
-    infoGui.Parent = menuGui
-    infoGui.Visible = false
+    -- صفحة المعلومات (صفحة 2)
+    local page2 = Instance.new("Frame")
+    page2.Size = UDim2.new(1, 0, 1, -35)
+    page2.Position = UDim2.new(0, 0, 0, 35)
+    page2.BackgroundTransparency = 1
+    page2.Parent = mainFrame
+    page2.Visible = false
 
     local infoText = Instance.new("TextLabel")
     infoText.Size = UDim2.new(0.9, 0, 0.9, 0)
@@ -369,25 +350,58 @@ local function createMenu()
                      "- البيوت (بروكهافن)\n" ..
                      "- فليك السنايبر (المقلد والأصل)\n\n" ..
                      "للاستفسار: @Saharrmohamed2005"
-    infoText.Parent = infoGui
+    infoText.Parent = page2
 
-    local closeInfo = Instance.new("TextButton")
-    closeInfo.Size = UDim2.new(0, 30, 0, 30)
-    closeInfo.Position = UDim2.new(1, -35, 0, 2)
-    closeInfo.BackgroundColor3 = Purple
-    closeInfo.Text = "X"
-    closeInfo.TextColor3 = White
-    closeInfo.Parent = infoGui
-    closeInfo.MouseButton1Click:Connect(function() infoGui.Visible = false end)
+    -- التنقل
+    local navFrame = Instance.new("Frame")
+    navFrame.Size = UDim2.new(0, 100, 1, 0)
+    navFrame.Position = UDim2.new(0, 0, 0, 35)
+    navFrame.BackgroundColor3 = Black
+    navFrame.BorderSizePixel = 1
+    navFrame.BorderColor3 = Purple
+    navFrame.Parent = mainFrame
 
-    infoBtn.MouseButton1Click:Connect(function()
-        infoGui.Visible = not infoGui.Visible
+    local navBtn1 = Instance.new("TextButton")
+    navBtn1.Size = UDim2.new(1, 0, 0, 50)
+    navBtn1.Position = UDim2.new(0, 0, 0, 0)
+    navBtn1.BackgroundTransparency = 1
+    navBtn1.Text = "تحكم\nاللاعب"
+    navBtn1.TextColor3 = Purple
+    navBtn1.Font = Enum.Font.SourceSansBold
+    navBtn1.Parent = navFrame
+
+    local navBtn2 = Instance.new("TextButton")
+    navBtn2.Size = UDim2.new(1, 0, 0, 50)
+    navBtn2.Position = UDim2.new(0, 0, 0, 50)
+    navBtn2.BackgroundTransparency = 1
+    navBtn2.Text = "معلومات"
+    navBtn2.TextColor3 = White
+    navBtn2.Font = Enum.Font.SourceSansBold
+    navBtn2.Parent = navFrame
+
+    page1.Position = UDim2.new(0, 100, 0, 35)
+    page1.Size = UDim2.new(1, -100, 1, -35)
+    page2.Position = UDim2.new(0, 100, 0, 35)
+    page2.Size = UDim2.new(1, -100, 1, -35)
+
+    navBtn1.MouseButton1Click:Connect(function()
+        page1.Visible = true
+        page2.Visible = false
+        navBtn1.TextColor3 = Purple
+        navBtn2.TextColor3 = White
     end)
 
-    -- زر الحقوق (Toggle)
+    navBtn2.MouseButton1Click:Connect(function()
+        page1.Visible = false
+        page2.Visible = true
+        navBtn1.TextColor3 = White
+        navBtn2.TextColor3 = Purple
+    end)
+
+    -- زر الحقوق
     local rightsBtn = Instance.new("TextButton")
-    rightsBtn.Size = UDim2.new(0, 250, 0, 20)
-    rightsBtn.Position = UDim2.new(0, 10, 1, -25)
+    rightsBtn.Size = UDim2.new(0, 250, 0, 30)
+    rightsBtn.Position = UDim2.new(0, 10, 1, -40)
     rightsBtn.BackgroundTransparency = 1
     rightsBtn.Text = "Speed by Eilia | TG @Saharrmohamed2005"
     rightsBtn.TextColor3 = Purple
@@ -411,9 +425,7 @@ local function createMenu()
         for _, p in ipairs(game.Players:GetPlayers()) do
             if p.Character then
                 local hl = p.Character:FindFirstChild("ESP_Highlight")
-                local box = p.Character:FindFirstChild("ESP_Box")
                 if hl then hl:Destroy() end
-                if box then box:Destroy() end
             end
         end
         menuGui:Destroy()
@@ -426,4 +438,5 @@ local function createMenu()
 end
 
 showSplash()
+showUpdateNotification()
 createMenu()
