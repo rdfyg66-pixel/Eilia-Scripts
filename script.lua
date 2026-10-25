@@ -1,1 +1,383 @@
-loadstring("LS0gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09Ci0tIFNjcmlwdDogRWlsaWEgTWVudSAoUHJvIFVJICsgRVNQKQotLSBEZXZlbG9wZXI6IEVpbGlhIChURyBAU2FoYXJybW9oYW1lZDIwMDUpCi0tID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQpsb2NhbCBwbGF5ZXIgPSBnYW1lLlBsYXllcnMuTG9jYWxQbGF5ZXIKbG9jYWwgcGxheWVyR3VpID0gcGxheWVyOldhaXRGb3JDaGlsZCgiUGxheWVyR3VpIikKCi0tINin2YTYo9mE2YjYp9mGCmxvY2FsIEJsYWNrID0gQ29sb3IzLmZyb21SR0IoMTAsIDEwLCAxMCkKbG9jYWwgUHVycGxlID0gQ29sb3IzLmZyb21SR0IoMTUwLCAwLCAyNTUpCmxvY2FsIFdoaXRlID0gQ29sb3IzLmZyb21SR0IoMjU1LCAyNTUsIDI1NSkKbG9jYWwgRGFya0dyZXkgPSBDb2xvcjMuZnJvbVJHQigzMCwgMzAsIDMwKQoKLS0gMS4g2LTYp9i02Kkg2KfZhNiq2LHYrdmK2KgKbG9jYWwgZnVuY3Rpb24gc2hvd1NwbGFzaCgpCiAgICBsb2NhbCBzcGxhc2hHdWkgPSBJbnN0YW5jZS5uZXcoIlNjcmVlbkd1aSIpCiAgICBzcGxhc2hHdWkuTmFtZSA9ICJFaWxpYVNwbGFzaCIKICAgIHNwbGFzaEd1aS5QYXJlbnQgPSBwbGF5ZXJHdWkKICAgIGxvY2FsIGZyYW1lID0gSW5zdGFuY2UubmV3KCJGcmFtZSIpCiAgICBmcmFtZS5TaXplID0gVURpbTIubmV3KDEsIDAsIDEsIDApCiAgICBmcmFtZS5CYWNrZ3JvdW5kQ29sb3IzID0gQ29sb3IzLm5ldygwLCAwLCAwKQogICAgZnJhbWUuQm9yZGVyU2l6ZVBpeGVsID0gMAogICAgZnJhbWUuUGFyZW50ID0gc3BsYXNoR3VpCiAgICBsb2NhbCB0ZXh0TGFiZWwgPSBJbnN0YW5jZS5uZXcoIlRleHRMYWJlbCIpCiAgICB0ZXh0TGFiZWwuU2l6ZSA9IFVEaW0yLm5ldygxLCAwLCAxLCAwKQogICAgdGV4dExhYmVsLkJhY2tncm91bmRUcmFuc3BhcmVuY3kgPSAxCiAgICB0ZXh0TGFiZWwuVGV4dCA9ICLwn5CJINiq2YUg2KrZgdi52YrZhCDYs9mD2LHYqNiqINil2YrZhNmK2Kcg8J+QiSIKICAgIHRleHRMYWJlbC5UZXh0Q29sb3IzID0gV2hpdGUKICAgIHRleHRMYWJlbC5UZXh0U2l6ZSA9IDMwCiAgICB0ZXh0TGFiZWwuRm9udCA9IEVudW0uRm9udC5Tb3VyY2VTYW5zQm9sZAogICAgdGV4dExhYmVsLlBhcmVudCA9IGZyYW1lCiAgICB0YXNrLndhaXQoMykKICAgIGZvciBpID0gMSwgMTAgZG8KICAgICAgICBmcmFtZS5CYWNrZ3JvdW5kVHJhbnNwYXJlbmN5ID0gaSAvIDEwCiAgICAgICAgdGV4dExhYmVsLlRleHRUcmFuc3BhcmVuY3kgPSBpIC8gMTAKICAgICAgICB0YXNrLndhaXQoMC4wNSkKICAgIGVuZAogICAgc3BsYXNoR3VpOkRlc3Ryb3koKQplbmQKCi0tIDIuINio2YbYp9ihINin2YTZgtin2KbZhdipCmxvY2FsIGZ1bmN0aW9uIGNyZWF0ZU1lbnUoKQogICAgbG9jYWwgbWVudUd1aSA9IEluc3RhbmNlLm5ldygiU2NyZWVuR3VpIikKICAgIG1lbnVHdWkuTmFtZSA9ICJFaWxpYU1lbnUiCiAgICBtZW51R3VpLlBhcmVudCA9IHBsYXllckd1aQoKICAgIGxvY2FsIG1haW5GcmFtZSA9IEluc3RhbmNlLm5ldygiRnJhbWUiKQogICAgbWFpbkZyYW1lLlNpemUgPSBVRGltMi5uZXcoMCwgNDUwLCAwLCA1MDApCiAgICBtYWluRnJhbWUuUG9zaXRpb24gPSBVRGltMi5uZXcoMC41LCAtMjI1LCAwLjUsIC0yNTApCiAgICBtYWluRnJhbWUuQmFja2dyb3VuZENvbG9yMyA9IEJsYWNrCiAgICBtYWluRnJhbWUuQm9yZGVyU2l6ZVBpeGVsID0gMgogICAgbWFpbkZyYW1lLkJvcmRlckNvbG9yMyA9IFB1cnBsZQogICAgbWFpbkZyYW1lLlBhcmVudCA9IG1lbnVHdWkKCiAgICBsb2NhbCB0b3BCYXIgPSBJbnN0YW5jZS5uZXcoIkZyYW1lIikKICAgIHRvcEJhci5TaXplID0gVURpbTIubmV3KDEsIDAsIDAsIDM1KQogICAgdG9wQmFyLkJhY2tncm91bmRDb2xvcjMgPSBCbGFjawogICAgdG9wQmFyLkJvcmRlclNpemVQaXhlbCA9IDIKICAgIHRvcEJhci5Cb3JkZXJDb2xvcjMgPSBQdXJwbGUKICAgIHRvcEJhci5QYXJlbnQgPSBtYWluRnJhbWUKCiAgICBsb2NhbCB0aXRsZSA9IEluc3RhbmNlLm5ldygiVGV4dExhYmVsIikKICAgIHRpdGxlLlNpemUgPSBVRGltMi5uZXcoMSwgMCwgMSwgMCkKICAgIHRpdGxlLkJhY2tncm91bmRUcmFuc3BhcmVuY3kgPSAxCiAgICB0aXRsZS5UZXh0ID0gIkVpbGlhIE1lbnUgfCBQcm8iCiAgICB0aXRsZS5UZXh0Q29sb3IzID0gUHVycGxlCiAgICB0aXRsZS5Gb250ID0gRW51bS5Gb250LlNvdXJjZVNhbnNCb2xkCiAgICB0aXRsZS5UZXh0U2l6ZSA9IDIwCiAgICB0aXRsZS5QYXJlbnQgPSB0b3BCYXIKCiAgICBsb2NhbCBidG5DbG9zZSA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICBidG5DbG9zZS5TaXplID0gVURpbTIubmV3KDAsIDMwLCAwLCAzMCkKICAgIGJ0bkNsb3NlLlBvc2l0aW9uID0gVURpbTIubmV3KDEsIC0zNSwgMCwgMikKICAgIGJ0bkNsb3NlLkJhY2tncm91bmRDb2xvcjMgPSBQdXJwbGUKICAgIGJ0bkNsb3NlLlRleHQgPSAiWCIKICAgIGJ0bkNsb3NlLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgYnRuQ2xvc2UuRm9udCA9IEVudW0uRm9udC5Tb3VyY2VTYW5zQm9sZAogICAgYnRuQ2xvc2UuUGFyZW50ID0gdG9wQmFyCiAgICAKICAgIGxvY2FsIGJ0bk1pbiA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICBidG5NaW4uU2l6ZSA9IFVEaW0yLm5ldygwLCAzMCwgMCwgMzApCiAgICBidG5NaW4uUG9zaXRpb24gPSBVRGltMi5uZXcoMSwgLTcwLCAwLCAyKQogICAgYnRuTWluLkJhY2tncm91bmRDb2xvcjMgPSBEYXJrR3JleQogICAgYnRuTWluLlRleHQgPSAiLSIKICAgIGJ0bk1pbi5UZXh0Q29sb3IzID0gV2hpdGUKICAgIGJ0bk1pbi5Gb250ID0gRW51bS5Gb250LlNvdXJjZVNhbnNCb2xkCiAgICBidG5NaW4uUGFyZW50ID0gdG9wQmFyCgogICAgbG9jYWwgcGFnZTEgPSBJbnN0YW5jZS5uZXcoIkZyYW1lIikKICAgIHBhZ2UxLlNpemUgPSBVRGltMi5uZXcoMSwgMCwgMSwgLTM1KQogICAgcGFnZTEuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMCwgMCwgMzUpCiAgICBwYWdlMS5CYWNrZ3JvdW5kVHJhbnNwYXJlbmN5ID0gMQogICAgcGFnZTEuUGFyZW50ID0gbWFpbkZyYW1lCgogICAgbG9jYWwgZnVuY3Rpb24gY3JlYXRlQ29udHJvbFBhbmVsKG5hbWUsIHlQb3MsIGRlZmF1bHRWYWwsIGlzU3BlZWQpCiAgICAgICAgbG9jYWwgY29udGFpbmVyID0gSW5zdGFuY2UubmV3KCJGcmFtZSIpCiAgICAgICAgY29udGFpbmVyLlNpemUgPSBVRGltMi5uZXcoMC45LCAwLCAwLCA4MCkKICAgICAgICBjb250YWluZXIuUG9zaXRpb24gPSBVRGltMi5uZXcoMC4wNSwgMCwgMCwgeVBvcykKICAgICAgICBjb250YWluZXIuQmFja2dyb3VuZENvbG9yMyA9IERhcmtHcmV5CiAgICAgICAgY29udGFpbmVyLkJvcmRlclNpemVQaXhlbCA9IDEKICAgICAgICBjb250YWluZXIuQm9yZGVyQ29sb3IzID0gUHVycGxlCiAgICAgICAgY29udGFpbmVyLlBhcmVudCA9IHBhZ2UxCgogICAgICAgIGxvY2FsIHRvZ2dsZUJ0biA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICAgICAgdG9nZ2xlQnRuLlNpemUgPSBVRGltMi5uZXcoMC40LCAwLCAwLCAzMCkKICAgICAgICB0b2dnbGVCdG4uUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMTAsIDAsIDEwKQogICAgICAgIHRvZ2dsZUJ0bi5CYWNrZ3JvdW5kQ29sb3IzID0gRGFya0dyZXkKICAgICAgICB0b2dnbGVCdG4uVGV4dCA9IG5hbWUgLi4gIiBbT0ZGXSIKICAgICAgICB0b2dnbGVCdG4uVGV4dENvbG9yMyA9IFdoaXRlCiAgICAgICAgdG9nZ2xlQnRuLkZvbnQgPSBFbnVtLkZvbnQuU291cmNlU2Fuc0JvbGQKICAgICAgICB0b2dnbGVCdG4uUGFyZW50ID0gY29udGFpbmVyCgogICAgICAgIGxvY2FsIHRleHRCb3ggPSBJbnN0YW5jZS5uZXcoIlRleHRCb3giKQogICAgICAgIHRleHRCb3guU2l6ZSA9IFVEaW0yLm5ldygwLjI1LCAwLCAwLCAzMCkKICAgICAgICB0ZXh0Qm94LlBvc2l0aW9uID0gVURpbTIubmV3KDAuNDUsIDAsIDAsIDEwKQogICAgICAgIHRleHRCb3guQmFja2dyb3VuZENvbG9yMyA9IEJsYWNrCiAgICAgICAgdGV4dEJveC5UZXh0Q29sb3IzID0gV2hpdGUKICAgICAgICB0ZXh0Qm94LlBsYWNlaG9sZGVyVGV4dCA9ICLYp9mE2LnYr9ivLi4uIgogICAgICAgIHRleHRCb3guVGV4dCA9IHRvc3RyaW5nKGRlZmF1bHRWYWwpCiAgICAgICAgdGV4dEJveC5Cb3JkZXJTaXplUGl4ZWwgPSAxCiAgICAgICAgdGV4dEJveC5Cb3JkZXJDb2xvcjMgPSBQdXJwbGUKICAgICAgICB0ZXh0Qm94LlBhcmVudCA9IGNvbnRhaW5lcgoKICAgICAgICBsb2NhbCBhcHBseUJ0biA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICAgICAgYXBwbHlCdG4uU2l6ZSA9IFVEaW0yLm5ldygwLjIsIDAsIDAsIDMwKQogICAgICAgIGFwcGx5QnRuLlBvc2l0aW9uID0gVURpbTIubmV3KDAuNzUsIDAsIDAsIDEwKQogICAgICAgIGFwcGx5QnRuLkJhY2tncm91bmRDb2xvcjMgPSBQdXJwbGUKICAgICAgICBhcHBseUJ0bi5UZXh0ID0gItiq2LfYqNmK2YIiCiAgICAgICAgYXBwbHlCdG4uVGV4dENvbG9yMyA9IFdoaXRlCiAgICAgICAgYXBwbHlCdG4uRm9udCA9IEVudW0uRm9udC5Tb3VyY2VTYW5zQm9sZAogICAgICAgIGFwcGx5QnRuLlBhcmVudCA9IGNvbnRhaW5lcgoKICAgICAgICBsb2NhbCBpc09uID0gZmFsc2UKICAgICAgICB0b2dnbGVCdG4uTW91c2VCdXR0b24xQ2xpY2s6Q29ubmVjdChmdW5jdGlvbigpCiAgICAgICAgICAgIGlzT24gPSBub3QgaXNPbgogICAgICAgICAgICBpZiBpc09uIHRoZW4KICAgICAgICAgICAgICAgIHRvZ2dsZUJ0bi5UZXh0ID0gbmFtZSAuLiAiIFtPTl0iCiAgICAgICAgICAgICAgICB0b2dnbGVCdG4uQmFja2dyb3VuZENvbG9yMyA9IFB1cnBsZQogICAgICAgICAgICBlbHNlCiAgICAgICAgICAgICAgICB0b2dnbGVCdG4uVGV4dCA9IG5hbWUgLi4gIiBbT0ZGXSIKICAgICAgICAgICAgICAgIHRvZ2dsZUJ0bi5CYWNrZ3JvdW5kQ29sb3IzID0gRGFya0dyZXkKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kKQoKICAgICAgICBhcHBseUJ0bi5Nb3VzZUJ1dHRvbjFDbGljazpDb25uZWN0KGZ1bmN0aW9uKCkKICAgICAgICAgICAgaWYgbm90IGlzT24gdGhlbiByZXR1cm4gZW5kCiAgICAgICAgICAgIGxvY2FsIG51bSA9IHRvbnVtYmVyKHRleHRCb3guVGV4dCkKICAgICAgICAgICAgaWYgbnVtIHRoZW4KICAgICAgICAgICAgICAgIGxvY2FsIGh1bSA9IHBsYXllci5DaGFyYWN0ZXIgYW5kIHBsYXllci5DaGFyYWN0ZXI6RmluZEZpcnN0Q2hpbGQoIkh1bWFub2lkIikKICAgICAgICAgICAgICAgIGlmIGh1bSB0aGVuCiAgICAgICAgICAgICAgICAgICAgaWYgaXNTcGVlZCB0aGVuIGh1bS5XYWxrU3BlZWQgPSBudW0KICAgICAgICAgICAgICAgICAgICBlbHNlIGh1bS5KdW1wUG93ZXIgPSBudW0gZW5kCiAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kKQogICAgZW5kCgogICAgY3JlYXRlQ29udHJvbFBhbmVsKCLYqtmB2LnZitmEINin2YTYs9ix2LnYqSIsIDEwLCAxNjAsIHRydWUpCiAgICBjcmVhdGVDb250cm9sUGFuZWwoItiq2YHYudmK2YQg2KfZhNmC2YHYsiIsIDEwMCwgMTI1LCBmYWxzZSkKCiAgICBsb2NhbCBncmF2aXR5TGFiZWwgPSBJbnN0YW5jZS5uZXcoIlRleHRMYWJlbCIpCiAgICBncmF2aXR5TGFiZWwuU2l6ZSA9IFVEaW0yLm5ldygwLjksIDAsIDAsIDIwKQogICAgZ3Jhdml0eUxhYmVsLlBvc2l0aW9uID0gVURpbTIubmV3KDAuMDUsIDAsIDAsIDE5MCkKICAgIGdyYXZpdHlMYWJlbC5CYWNrZ3JvdW5kVHJhbnNwYXJlbmN5ID0gMQogICAgZ3Jhdml0eUxhYmVsLlRleHQgPSAi2KrYrtmB2YrZgSDYp9mE2KzYp9iw2KjZitipOiIKICAgIGdyYXZpdHlMYWJlbC5UZXh0Q29sb3IzID0gV2hpdGUKICAgIGdyYXZpdHlMYWJlbC5Gb250ID0gRW51bS5Gb250LlNvdXJjZVNhbnNCb2xkCiAgICBncmF2aXR5TGFiZWwuVGV4dFhBbGlnbm1lbnQgPSBFbnVtLlRleHRYQWxpZ25tZW50LkxlZnQKICAgIGdyYXZpdHlMYWJlbC5QYXJlbnQgPSBwYWdlMQoKICAgIGxvY2FsIGdyYXZpdHlGcmFtZSA9IEluc3RhbmNlLm5ldygiRnJhbWUiKQogICAgZ3Jhdml0eUZyYW1lLlNpemUgPSBVRGltMi5uZXcoMC45LCAwLCAwLCAzMCkKICAgIGdyYXZpdHlGcmFtZS5Qb3NpdGlvbiA9IFVEaW0yLm5ldygwLjA1LCAwLCAwLCAyMTUpCiAgICBncmF2aXR5RnJhbWUuQmFja2dyb3VuZFRyYW5zcGFyZW5jeSA9IDEKICAgIGdyYXZpdHlGcmFtZS5QYXJlbnQgPSBwYWdlMQoKICAgIGxvY2FsIGdyYXZpdGllcyA9IHsxNSwgMjAsIDMwLCA0MCwgNDR9CiAgICBmb3IgaSwgdmFsIGluIGlwYWlycyhncmF2aXRpZXMpIGRvCiAgICAgICAgbG9jYWwgZ0J0biA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICAgICAgZ0J0bi5TaXplID0gVURpbTIubmV3KDAuMTgsIDAsIDAsIDMwKQogICAgICAgIGdCdG4uUG9zaXRpb24gPSBVRGltMi5uZXcoKGktMSkgKiAwLjIsIDAsIDAsIDApCiAgICAgICAgZ0J0bi5CYWNrZ3JvdW5kQ29sb3IzID0gUHVycGxlCiAgICAgICAgZ0J0bi5UZXh0ID0gdG9zdHJpbmcodmFsKSAuLiAiJSIKICAgICAgICBnQnRuLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgICAgIGdCdG4uRm9udCA9IEVudW0uRm9udC5Tb3VyY2VTYW5zQm9sZAogICAgICAgIGdCdG4uUGFyZW50ID0gZ3Jhdml0eUZyYW1lCiAgICAgICAgZ0J0bi5Nb3VzZUJ1dHRvbjFDbGljazpDb25uZWN0KGZ1bmN0aW9uKCkKICAgICAgICAgICAgZ2FtZS5Xb3Jrc3BhY2UuR3Jhdml0eSA9IDE5Ni4yICogKDEgLSAodmFsIC8gMTAwKSkKICAgICAgICBlbmQpCiAgICBlbmQKCiAgICBsb2NhbCBlc3BCdG4gPSBJbnN0YW5jZS5uZXcoIlRleHRCdXR0b24iKQogICAgZXNwQnRuLlNpemUgPSBVRGltMi5uZXcoMC45LCAwLCAwLCA0MCkKICAgIGVzcEJ0bi5Qb3NpdGlvbiA9IFVEaW0yLm5ldygwLjA1LCAwLCAwLCAyNjApCiAgICBlc3BCdG4uQmFja2dyb3VuZENvbG9yMyA9IERhcmtHcmV5CiAgICBlc3BCdG4uVGV4dCA9ICLYqtmB2LnZitmEINmD2LTZgSDYp9mE2KPYudiv2KfYoSAoMzAwINio2YTZiNmD2KkpIFtPRkZdIgogICAgZXNwQnRuLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgZXNwQnRuLkZvbnQgPSBFbnVtLkZvbnQuU291cmNlU2Fuc0JvbGQKICAgIGVzcEJ0bi5QYXJlbnQgPSBwYWdlMQoKICAgIGxvY2FsIGVzcE9uID0gZmFsc2UKICAgIGVzcEJ0bi5Nb3VzZUJ1dHRvbjFDbGljazpDb25uZWN0KGZ1bmN0aW9uKCkKICAgICAgICBlc3BPbiA9IG5vdCBlc3BPbgogICAgICAgIGlmIGVzcE9uIHRoZW4KICAgICAgICAgICAgZXNwQnRuLlRleHQgPSAi2KrZgdi52YrZhCDZg9i02YEg2KfZhNij2LnYr9in2KEgKDMwMCDYqNmE2YjZg9ipKSBbT05dIgogICAgICAgICAgICBlc3BCdG4uQmFja2dyb3VuZENvbG9yMyA9IFB1cnBsZQogICAgICAgIGVsc2UKICAgICAgICAgICAgZXNwQnRuLlRleHQgPSAi2KrZgdi52YrZhCDZg9i02YEg2KfZhNij2LnYr9in2KEgKDMwMCDYqNmE2YjZg9ipKSBbT0ZGXSIKICAgICAgICAgICAgZXNwQnRuLkJhY2tncm91bmRDb2xvcjMgPSBEYXJrR3JleQogICAgICAgICAgICBmb3IgXywgcCBpbiBpcGFpcnMoZ2FtZS5QbGF5ZXJzOkdldFBsYXllcnMoKSkgZG8KICAgICAgICAgICAgICAgIGlmIHAuQ2hhcmFjdGVyIHRoZW4KICAgICAgICAgICAgICAgICAgICBsb2NhbCBobCA9IHAuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfSGlnaGxpZ2h0IikKICAgICAgICAgICAgICAgICAgICBsb2NhbCBib3ggPSBwLkNoYXJhY3RlcjpGaW5kRmlyc3RDaGlsZCgiRVNQX0JveCIpCiAgICAgICAgICAgICAgICAgICAgaWYgaGwgdGhlbiBobDpEZXN0cm95KCkgZW5kCiAgICAgICAgICAgICAgICAgICAgaWYgYm94IHRoZW4gYm94OkRlc3Ryb3koKSBlbmQKICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICBlbmQKICAgICAgICBlbmQKICAgIGVuZCkKCiAgICB0YXNrLnNwYXduKGZ1bmN0aW9uKCkKICAgICAgICB3aGlsZSB0YXNrLndhaXQoMC41KSBkbwogICAgICAgICAgICBpZiBlc3BPbiBhbmQgcGxheWVyLkNoYXJhY3RlciB0aGVuCiAgICAgICAgICAgICAgICBsb2NhbCBteVJvb3QgPSBwbGF5ZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJIdW1hbm9pZFJvb3RQYXJ0IikKICAgICAgICAgICAgICAgIGlmIG15Um9vdCB0aGVuCiAgICAgICAgICAgICAgICAgICAgZm9yIF8sIG90aGVyIGluIGlwYWlycyhnYW1lLlBsYXllcnM6R2V0UGxheWVycygpKSBkbwogICAgICAgICAgICAgICAgICAgICAgICBpZiBvdGhlciB+PSBwbGF5ZXIgYW5kIG90aGVyLkNoYXJhY3RlciB0aGVuCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb2NhbCBvdGhlclJvb3QgPSBvdGhlci5DaGFyYWN0ZXI6RmluZEZpcnN0Q2hpbGQoIkh1bWFub2lkUm9vdFBhcnQiKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgb3RoZXJSb290IHRoZW4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb2NhbCBkaXN0ID0gKG15Um9vdC5Qb3NpdGlvbiAtIG90aGVyUm9vdC5Qb3NpdGlvbikuTWFnbml0dWRlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgZGlzdCA8PSAzMDAgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBub3Qgb3RoZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfSGlnaGxpZ2h0IikgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbG9jYWwgaGwgPSBJbnN0YW5jZS5uZXcoIkhpZ2hsaWdodCIpCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBobC5OYW1lID0gIkVTUF9IaWdobGlnaHQiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBobC5GaWxsQ29sb3IgPSBQdXJwbGUKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhsLk91dGxpbmVDb2xvciA9IFB1cnBsZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaGwuUGFyZW50ID0gb3RoZXIuQ2hhcmFjdGVyCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBub3Qgb3RoZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfQm94IikgdGhlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbG9jYWwgYm94ID0gSW5zdGFuY2UubmV3KCJTZWxlY3Rpb25Cb3giKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYm94Lk5hbWUgPSAiRVNQX0JveCIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJveC5BZG9ybmVlID0gb3RoZXJSb290CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBib3guQ29sb3IzID0gUHVycGxlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBib3guTGluZVRoaWNrbmVzcyA9IDAuMQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYm94LlBhcmVudCA9IG90aGVyLkNoYXJhY3RlcgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsIGhsID0gb3RoZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfSGlnaGxpZ2h0IikKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbG9jYWwgYm94ID0gb3RoZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfQm94IikKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgaGwgdGhlbiBobDpEZXN0cm95KCkgZW5kCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGJveCB0aGVuIGJveDpEZXN0cm95KCkgZW5kCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICAgICAgZW5kCiAgICAgICAgICAgICAgICBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kCiAgICBlbmQpCgogICAgbG9jYWwgcGFnZTIgPSBJbnN0YW5jZS5uZXcoIkZyYW1lIikKICAgIHBhZ2UyLlNpemUgPSBVRGltMi5uZXcoMSwgMCwgMSwgLTM1KQogICAgcGFnZTIuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMCwgMCwgMzUpCiAgICBwYWdlMi5CYWNrZ3JvdW5kVHJhbnNwYXJlbmN5ID0gMQogICAgcGFnZTIuUGFyZW50ID0gbWFpbkZyYW1lCiAgICBwYWdlMi5WaXNpYmxlID0gZmFsc2UKCiAgICBsb2NhbCBpbmZvVGV4dCA9IEluc3RhbmNlLm5ldygiVGV4dExhYmVsIikKICAgIGluZm9UZXh0LlNpemUgPSBVRGltMi5uZXcoMC45LCAwLCAwLjksIDApCiAgICBpbmZvVGV4dC5Qb3NpdGlvbiA9IFVEaW0yLm5ldygwLjA1LCAwLCAwLjA1LCAwKQogICAgaW5mb1RleHQuQmFja2dyb3VuZFRyYW5zcGFyZW5jeSA9IDEKICAgIGluZm9UZXh0LlRleHRDb2xvcjMgPSBXaGl0ZQogICAgaW5mb1RleHQuVGV4dFhBbGlnbm1lbnQgPSBFbnVtLlRleHRYQWxpZ25tZW50LkxlZnQKICAgIGluZm9UZXh0LlRleHRZQWxpZ25tZW50ID0gRW51bS5UZXh0WUFsaWdubWVudC5Ub3AKICAgIGluZm9UZXh0LkZvbnQgPSBFbnVtLkZvbnQuU291cmNlU2FucwogICAgaW5mb1RleHQuVGV4dFNpemUgPSAxNgogICAgaW5mb1RleHQuVGV4dFdyYXBwZWQgPSB0cnVlCiAgICBpbmZvVGV4dC5UZXh0ID0gItmF2LfZiNixINin2YTYs9mD2LHYqNiqOiDYpdmK2YTZitinXG4iIC4uCiAgICAgICAgICAgICAgICAgICAgICLYqtmK2YMg2KrZiNmDOiBiMl9hZlxuIiAuLgogICAgICAgICAgICAgICAgICAgICAi2KrZhNi62LHYp9mFOiBAU2FoYXJybW9oYW1lZDIwMDVcbiIgLi4KICAgICAgICAgICAgICAgICAgICAgItmC2YbYp9ipINiq2YTYutix2KfZhTogdzhxX3lcblxuIiAuLgogICAgICAgICAgICAgICAgICAgICAi2KfZhNmF2KfYqNin2Kog2KfZhNmF2K/YudmI2YXYqTpcbiIgLi4KICAgICAgICAgICAgICAgICAgICAgIi0g2YXYp9ioINis2LPYqiDYqNmE2KfZhtiqXG4iIC4uCiAgICAgICAgICAgICAgICAgICAgICItINmF2KfYqCDYs9ix2YLYqSDYp9mE2KjYsdin2YrZhiAo2KfZhNiq2K3Yr9mK2KvYp9iqINin2YTYo9iu2YrYsdipKVxuIiAuLgogICAgICAgICAgICAgICAgICAgICAiLSDZhdin2Kgg2KfZhNio2YrZiNiqICjYqNix2YjZg9mH2KfZgdmGKVxuIiAuLgogICAgICAgICAgICAgICAgICAgICAiLSDZhdin2Kgg2YHZhNmK2YMg2KfZhNiz2YbYp9mK2KjYsSAo2KfZhNmF2YLZhNivINmI2KfZhNij2LXZhClcblxuIiAuLgogICAgICAgICAgICAgICAgICAgICAi2KXYsNinINmE2K/ZitmDINmF2KfYqCDYotiu2LEg2KrZiNivINin2YTYs9ik2KfZhCDYudmG2YfYjCDZitix2KzZiSDYs9ik2KfZhCDYp9mE2YXYt9mI2LEg2KfZhNix2KbZitiz2Yog2LnZhNmJINiq2YTYutix2KfZhTogQFNhaGFycm1vaGFtZWQyMDA1IgogICAgaW5mb1RleHQuUGFyZW50ID0gcGFnZTIKCiAgICBsb2NhbCBuYXZGcmFtZSA9IEluc3RhbmNlLm5ldygiRnJhbWUiKQogICAgbmF2RnJhbWUuU2l6ZSA9IFVEaW0yLm5ldygwLCAxMDAsIDEsIDApCiAgICBuYXZGcmFtZS5Qb3NpdGlvbiA9IFVEaW0yLm5ldygwLCAwLCAwLCAzNSkKICAgIG5hdkZyYW1lLkJhY2tncm91bmRDb2xvcjMgPSBCbGFjawogICAgbmF2RnJhbWUuQm9yZGVyU2l6ZVBpeGVsID0gMQogICAgbmF2RnJhbWUuQm9yZGVyQ29sb3IzID0gUHVycGxlCiAgICBuYXZGcmFtZS5QYXJlbnQgPSBtYWluRnJhbWUKCiAgICBsb2NhbCBuYXZCdG4xID0gSW5zdGFuY2UubmV3KCJUZXh0QnV0dG9uIikKICAgIG5hdkJ0bjEuU2l6ZSA9IFVEaW0yLm5ldygxLCAwLCAwLCA1MCkKICAgIG5hdkJ0bjEuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMCwgMCwgMCkKICAgIG5hdkJ0bjEuQmFja2dyb3VuZFRyYW5zcGFyZW5jeSA9IDEKICAgIG5hdkJ0bjEuVGV4dCA9ICLYqtit2YPZhVxu2KfZhNmE2KfYudioIgogICAgbmF2QnRuMS5UZXh0Q29sb3IzID0gUHVycGxlCiAgICBuYXZCdG4xLkZvbnQgPSBFbnVtLkZvbnQuU291cmNlU2Fuc0JvbGQKICAgIG5hdkJ0bjEuUGFyZW50ID0gbmF2RnJhbWUKCiAgICBsb2NhbCBuYXZCdG4yID0gSW5zdGFuY2UubmV3KCJUZXh0QnV0dG9uIikKICAgIG5hdkJ0bjIuU2l6ZSA9IFVEaW0yLm5ldygxLCAwLCAwLCA1MCkKICAgIG5hdkJ0bjIuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMCwgMCwgNTApCiAgICBuYXZCdG4yLkJhY2tncm91bmRUcmFuc3BhcmVuY3kgPSAxCiAgICBuYXZCdG4yLlRleHQgPSAi2YXYudmE2YjZhdin2KoiCiAgICBuYXZCdG4yLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgbmF2QnRuMi5Gb250ID0gRW51bS5Gb250LlNvdXJjZVNhbnNCb2xkCiAgICBuYXZCdG4yLlBhcmVudCA9IG5hdkZyYW1lCgogICAgcGFnZTEuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMTAwLCAwLCAzNSkKICAgIHBhZ2UxLlNpemUgPSBVRGltMi5uZXcoMSwgLTEwMCwgMSwgLTM1KQogICAgcGFnZTIuUG9zaXRpb24gPSBVRGltMi5uZXcoMCwgMTAwLCAwLCAzNSkKICAgIHBhZ2UyLlNpemUgPSBVRGltMi5uZXcoMSwgLTEwMCwgMSwgLTM1KQoKICAgIG5hdkJ0bjEuTW91c2VCdXR0b24xQ2xpY2s6Q29ubmVjdChmdW5jdGlvbigpCiAgICAgICAgcGFnZTEuVmlzaWJsZSA9IHRydWUKICAgICAgICBwYWdlMi5WaXNpYmxlID0gZmFsc2UKICAgICAgICBuYXZCdG4xLlRleHRDb2xvcjMgPSBQdXJwbGUKICAgICAgICBuYXZCdG4yLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgZW5kKQoKICAgIG5hdkJ0bjIuTW91c2VCdXR0b24xQ2xpY2s6Q29ubmVjdChmdW5jdGlvbigpCiAgICAgICAgcGFnZTEuVmlzaWJsZSA9IGZhbHNlCiAgICAgICAgcGFnZTIuVmlzaWJsZSA9IHRydWUKICAgICAgICBuYXZCdG4xLlRleHRDb2xvcjMgPSBXaGl0ZQogICAgICAgIG5hdkJ0bjIuVGV4dENvbG9yMyA9IFB1cnBsZQogICAgZW5kKQoKICAgIGxvY2FsIHJpZ2h0c0J0biA9IEluc3RhbmNlLm5ldygiVGV4dEJ1dHRvbiIpCiAgICByaWdodHNCdG4uU2l6ZSA9IFVEaW0yLm5ldygwLCAyNTAsIDAsIDMwKQogICAgcmlnaHRzQnRuLlBvc2l0aW9uID0gVURpbTIubmV3KDAsIDEwLCAxLCAtNDApCiAgICByaWdodHNCdG4uQmFja2dyb3VuZFRyYW5zcGFyZW5jeSA9IDEKICAgIHJpZ2h0c0J0bi5UZXh0ID0gIlNwZWVkIFNjcmlwdCBieSBFaWxpYSB8IFRHIEBTYWhhcnJtb2hhbWVkMjAwNSIKICAgIHJpZ2h0c0J0bi5UZXh0Q29sb3IzID0gUHVycGxlCiAgICByaWdodHNCdG4uRm9udCA9IEVudW0uRm9udC5Tb3VyY2VTYW5zQm9sZAogICAgcmlnaHRzQnRuLlRleHRTaXplID0gMTIKICAgIHJpZ2h0c0J0bi5UZXh0WEFsaWdubWVudCA9IEVudW0uVGV4dFhBbGlnbm1lbnQuTGVmdAogICAgcmlnaHRzQnRuLlBhcmVudCA9IG1lbnVHdWkKCiAgICByaWdodHNCdG4uTW91c2VCdXR0b24xQ2xpY2s6Q29ubmVjdChmdW5jdGlvbigpCiAgICAgICAgbWFpbkZyYW1lLlZpc2libGUgPSBub3QgbWFpbkZyYW1lLlZpc2libGUKICAgIGVuZCkKCiAgICBidG5DbG9zZS5Nb3VzZUJ1dHRvbjFDbGljazpDb25uZWN0KGZ1bmN0aW9uKCkKICAgICAgICBsb2NhbCBodW0gPSBwbGF5ZXIuQ2hhcmFjdGVyIGFuZCBwbGF5ZXIuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJIdW1hbm9pZCIpCiAgICAgICAgaWYgaHVtIHRoZW4KICAgICAgICAgICAgaHVtLldhbGtTcGVlZCA9IDE2CiAgICAgICAgICAgIGh1bS5KdW1wUG93ZXIgPSA1MAogICAgICAgIGVuZAogICAgICAgIGdhbWUuV29ya3NwYWNlLkdyYXZpdHkgPSAxOTYuMgogICAgICAgIGZvciBfLCBwIGluIGlwYWlycyhnYW1lLlBsYXllcnM6R2V0UGxheWVycygpKSBkbwogICAgICAgICAgICBpZiBwLkNoYXJhY3RlciB0aGVuCiAgICAgICAgICAgICAgICBsb2NhbCBobCA9IHAuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfSGlnaGxpZ2h0IikKICAgICAgICAgICAgICAgIGxvY2FsIGJveCA9IHAuQ2hhcmFjdGVyOkZpbmRGaXJzdENoaWxkKCJFU1BfQm94IikKICAgICAgICAgICAgICAgIGlmIGhsIHRoZW4gaGw6RGVzdHJveSgpIGVuZAogICAgICAgICAgICAgICAgaWYgYm94IHRoZW4gYm94OkRlc3Ryb3koKSBlbmQKICAgICAgICAgICAgZW5kCiAgICAgICAgZW5kCiAgICAgICAgbWVudUd1aTpEZXN0cm95KCkKICAgIGVuZCkKICAgIAogICAgYnRuTWluLk1vdXNlQnV0dG9uMUNsaWNrOkNvbm5lY3QoZnVuY3Rpb24oKQogICAgICAgIG1haW5GcmFtZS5WaXNpYmxlID0gZmFsc2UKICAgIGVuZCkKZW5kCgpzaG93U3BsYXNoKCkKY3JlYXRlTWVudSgpCg==")()
+-- ==========================================
+-- Script: Eilia Menu (Pro UI + ESP)
+-- Developer: Eilia (TG @Saharrmohamed2005)
+-- ==========================================
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- الألوان
+local Black = Color3.fromRGB(10, 10, 10)
+local Purple = Color3.fromRGB(150, 0, 255)
+local White = Color3.fromRGB(255, 255, 255)
+local DarkGrey = Color3.fromRGB(30, 30, 30)
+
+-- 1. شاشة الترحيب
+local function showSplash()
+    local splashGui = Instance.new("ScreenGui")
+    splashGui.Name = "EiliaSplash"
+    splashGui.Parent = playerGui
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(1, 0, 1, 0)
+    frame.BackgroundColor3 = Color3.new(0, 0, 0)
+    frame.BorderSizePixel = 0
+    frame.Parent = splashGui
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Text = "🐉 تم تفعيل سكربت إيليا 🐉"
+    textLabel.TextColor3 = White
+    textLabel.TextSize = 30
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.Parent = frame
+    task.wait(3)
+    for i = 1, 10 do
+        frame.BackgroundTransparency = i / 10
+        textLabel.TextTransparency = i / 10
+        task.wait(0.05)
+    end
+    splashGui:Destroy()
+end
+
+-- 2. بناء القائمة
+local function createMenu()
+    local menuGui = Instance.new("ScreenGui")
+    menuGui.Name = "EiliaMenu"
+    menuGui.Parent = playerGui
+
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Size = UDim2.new(0, 450, 0, 500)
+    mainFrame.Position = UDim2.new(0.5, -225, 0.5, -250)
+    mainFrame.BackgroundColor3 = Black
+    mainFrame.BorderSizePixel = 2
+    mainFrame.BorderColor3 = Purple
+    mainFrame.Parent = menuGui
+
+    local topBar = Instance.new("Frame")
+    topBar.Size = UDim2.new(1, 0, 0, 35)
+    topBar.BackgroundColor3 = Black
+    topBar.BorderSizePixel = 2
+    topBar.BorderColor3 = Purple
+    topBar.Parent = mainFrame
+
+    local title = Instance.new("TextLabel")
+    title.Size = UDim2.new(1, 0, 1, 0)
+    title.BackgroundTransparency = 1
+    title.Text = "Eilia Menu | Pro"
+    title.TextColor3 = Purple
+    title.Font = Enum.Font.SourceSansBold
+    title.TextSize = 20
+    title.Parent = topBar
+
+    local btnClose = Instance.new("TextButton")
+    btnClose.Size = UDim2.new(0, 30, 0, 30)
+    btnClose.Position = UDim2.new(1, -35, 0, 2)
+    btnClose.BackgroundColor3 = Purple
+    btnClose.Text = "X"
+    btnClose.TextColor3 = White
+    btnClose.Font = Enum.Font.SourceSansBold
+    btnClose.Parent = topBar
+    
+    local btnMin = Instance.new("TextButton")
+    btnMin.Size = UDim2.new(0, 30, 0, 30)
+    btnMin.Position = UDim2.new(1, -70, 0, 2)
+    btnMin.BackgroundColor3 = DarkGrey
+    btnMin.Text = "-"
+    btnMin.TextColor3 = White
+    btnMin.Font = Enum.Font.SourceSansBold
+    btnMin.Parent = topBar
+
+    local page1 = Instance.new("Frame")
+    page1.Size = UDim2.new(1, 0, 1, -35)
+    page1.Position = UDim2.new(0, 0, 0, 35)
+    page1.BackgroundTransparency = 1
+    page1.Parent = mainFrame
+
+    -- دالة إنشاء زر التفعيل + مربع النص
+    local function createControlPanel(name, yPos, defaultVal, isSpeed)
+        local container = Instance.new("Frame")
+        container.Size = UDim2.new(0.9, 0, 0, 80)
+        container.Position = UDim2.new(0.05, 0, 0, yPos)
+        container.BackgroundColor3 = DarkGrey
+        container.BorderSizePixel = 1
+        container.BorderColor3 = Purple
+        container.Parent = page1
+
+        local toggleBtn = Instance.new("TextButton")
+        toggleBtn.Size = UDim2.new(0.4, 0, 0, 30)
+        toggleBtn.Position = UDim2.new(0, 10, 0, 10)
+        toggleBtn.BackgroundColor3 = DarkGrey
+        toggleBtn.Text = name .. " [OFF]"
+        toggleBtn.TextColor3 = White
+        toggleBtn.Font = Enum.Font.SourceSansBold
+        toggleBtn.Parent = container
+
+        local textBox = Instance.new("TextBox")
+        textBox.Size = UDim2.new(0.25, 0, 0, 30)
+        textBox.Position = UDim2.new(0.45, 0, 0, 10)
+        textBox.BackgroundColor3 = Black
+        textBox.TextColor3 = White
+        textBox.PlaceholderText = "العدد..."
+        textBox.Text = tostring(defaultVal)
+        textBox.BorderSizePixel = 1
+        textBox.BorderColor3 = Purple
+        textBox.Parent = container
+
+        local applyBtn = Instance.new("TextButton")
+        applyBtn.Size = UDim2.new(0.2, 0, 0, 30)
+        applyBtn.Position = UDim2.new(0.75, 0, 0, 10)
+        applyBtn.BackgroundColor3 = Purple
+        applyBtn.Text = "تطبيق"
+        applyBtn.TextColor3 = White
+        applyBtn.Font = Enum.Font.SourceSansBold
+        applyBtn.Parent = container
+
+        local isOn = false
+        toggleBtn.MouseButton1Click:Connect(function()
+            isOn = not isOn
+            if isOn then
+                toggleBtn.Text = name .. " [ON]"
+                toggleBtn.BackgroundColor3 = Purple
+            else
+                toggleBtn.Text = name .. " [OFF]"
+                toggleBtn.BackgroundColor3 = DarkGrey
+            end
+        end)
+
+        applyBtn.MouseButton1Click:Connect(function()
+            if not isOn then return end
+            local num = tonumber(textBox.Text)
+            if num then
+                local hum = player.Character and player.Character:FindFirstChild("Humanoid")
+                if hum then
+                    if isSpeed then hum.WalkSpeed = num
+                    else hum.JumpPower = num end
+                end
+            end
+        end)
+    end
+
+    createControlPanel("تفعيل السرعة", 10, 160, true)
+    createControlPanel("تفعيل القفز", 100, 125, false)
+
+    -- أزرار الجاذبية
+    local gravityLabel = Instance.new("TextLabel")
+    gravityLabel.Size = UDim2.new(0.9, 0, 0, 20)
+    gravityLabel.Position = UDim2.new(0.05, 0, 0, 190)
+    gravityLabel.BackgroundTransparency = 1
+    gravityLabel.Text = "تخفيف الجاذبية:"
+    gravityLabel.TextColor3 = White
+    gravityLabel.Font = Enum.Font.SourceSansBold
+    gravityLabel.TextXAlignment = Enum.TextXAlignment.Left
+    gravityLabel.Parent = page1
+
+    local gravityFrame = Instance.new("Frame")
+    gravityFrame.Size = UDim2.new(0.9, 0, 0, 30)
+    gravityFrame.Position = UDim2.new(0.05, 0, 0, 215)
+    gravityFrame.BackgroundTransparency = 1
+    gravityFrame.Parent = page1
+
+    local gravities = {15, 20, 30, 40, 44}
+    for i, val in ipairs(gravities) do
+        local gBtn = Instance.new("TextButton")
+        gBtn.Size = UDim2.new(0.18, 0, 0, 30)
+        gBtn.Position = UDim2.new((i-1) * 0.2, 0, 0, 0)
+        gBtn.BackgroundColor3 = Purple
+        gBtn.Text = tostring(val) .. "%"
+        gBtn.TextColor3 = White
+        gBtn.Font = Enum.Font.SourceSansBold
+        gBtn.Parent = gravityFrame
+        gBtn.MouseButton1Click:Connect(function()
+            game.Workspace.Gravity = 196.2 * (1 - (val / 100))
+        end)
+    end
+
+    -- 👇 زر الكشف (ESP) الجديد
+    local espBtn = Instance.new("TextButton")
+    espBtn.Size = UDim2.new(0.9, 0, 0, 40)
+    espBtn.Position = UDim2.new(0.05, 0, 0, 260)
+    espBtn.BackgroundColor3 = DarkGrey
+    espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [OFF]"
+    espBtn.TextColor3 = White
+    espBtn.Font = Enum.Font.SourceSansBold
+    espBtn.Parent = page1
+
+    local espOn = false
+    espBtn.MouseButton1Click:Connect(function()
+        espOn = not espOn
+        if espOn then
+            espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [ON]"
+            espBtn.BackgroundColor3 = Purple
+        else
+            espBtn.Text = "تفعيل كشف الأعداء (300 بلوكة) [OFF]"
+            espBtn.BackgroundColor3 = DarkGrey
+            -- تنظيف التأثيرات من الجميع
+            for _, p in ipairs(game.Players:GetPlayers()) do
+                if p.Character then
+                    local hl = p.Character:FindFirstChild("ESP_Highlight")
+                    local box = p.Character:FindFirstChild("ESP_Box")
+                    if hl then hl:Destroy() end
+                    if box then box:Destroy() end
+                end
+            end
+        end
+    end)
+
+    -- تشغيل الكشف بالخلفية
+    task.spawn(function()
+        while task.wait(0.5) do
+            if espOn and player.Character then
+                local myRoot = player.Character:FindFirstChild("HumanoidRootPart")
+                if myRoot then
+                    for _, other in ipairs(game.Players:GetPlayers()) do
+                        if other ~= player and other.Character then
+                            local otherRoot = other.Character:FindFirstChild("HumanoidRootPart")
+                            if otherRoot then
+                                local dist = (myRoot.Position - otherRoot.Position).Magnitude
+                                if dist <= 300 then
+                                    -- إضافة التلوين والمكعب
+                                    if not other.Character:FindFirstChild("ESP_Highlight") then
+                                        local hl = Instance.new("Highlight")
+                                        hl.Name = "ESP_Highlight"
+                                        hl.FillColor = Purple
+                                        hl.OutlineColor = Purple
+                                        hl.Parent = other.Character
+                                    end
+                                    if not other.Character:FindFirstChild("ESP_Box") then
+                                        local box = Instance.new("SelectionBox")
+                                        box.Name = "ESP_Box"
+                                        box.Adornee = otherRoot
+                                        box.Color3 = Purple
+                                        box.LineThickness = 0.1
+                                        box.Parent = other.Character
+                                    end
+                                else
+                                    -- إزالة التأثيرات إذا بعد
+                                    local hl = other.Character:FindFirstChild("ESP_Highlight")
+                                    local box = other.Character:FindFirstChild("ESP_Box")
+                                    if hl then hl:Destroy() end
+                                    if box then box:Destroy() end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end)
+
+    -- صفحة المعلومات
+    local page2 = Instance.new("Frame")
+    page2.Size = UDim2.new(1, 0, 1, -35)
+    page2.Position = UDim2.new(0, 0, 0, 35)
+    page2.BackgroundTransparency = 1
+    page2.Parent = mainFrame
+    page2.Visible = false
+
+    local infoText = Instance.new("TextLabel")
+    infoText.Size = UDim2.new(0.9, 0, 0.9, 0)
+    infoText.Position = UDim2.new(0.05, 0, 0.05, 0)
+    infoText.BackgroundTransparency = 1
+    infoText.TextColor3 = White
+    infoText.TextXAlignment = Enum.TextXAlignment.Left
+    infoText.TextYAlignment = Enum.TextYAlignment.Top
+    infoText.Font = Enum.Font.SourceSans
+    infoText.TextSize = 16
+    infoText.TextWrapped = true
+    infoText.Text = "مطور السكربت: إيليا\n" ..
+                     "تيك توك: b2_af\n" ..
+                     "تلغرام: @Saharrmohamed2005\n" ..
+                     "قناة تلغرام: w8q_y\n\n" ..
+                     "المابات المدعومة:\n" ..
+                     "- ماب جست بلانت\n" ..
+                     "- ماب سرقة البراين (التحديثات الأخيرة)\n" ..
+                     "- ماب البيوت (بروكهافن)\n" ..
+                     "- ماب فليك السنايبر (المقلد والأصل)\n\n" ..
+                     "إذا لديك ماب آخر تود السؤال عنه، يرجى سؤال المطور الرئيسي على تلغرام: @Saharrmohamed2005"
+    infoText.Parent = page2
+
+    -- التنقل
+    local navFrame = Instance.new("Frame")
+    navFrame.Size = UDim2.new(0, 100, 1, 0)
+    navFrame.Position = UDim2.new(0, 0, 0, 35)
+    navFrame.BackgroundColor3 = Black
+    navFrame.BorderSizePixel = 1
+    navFrame.BorderColor3 = Purple
+    navFrame.Parent = mainFrame
+
+    local navBtn1 = Instance.new("TextButton")
+    navBtn1.Size = UDim2.new(1, 0, 0, 50)
+    navBtn1.Position = UDim2.new(0, 0, 0, 0)
+    navBtn1.BackgroundTransparency = 1
+    navBtn1.Text = "تحكم\nاللاعب"
+    navBtn1.TextColor3 = Purple
+    navBtn1.Font = Enum.Font.SourceSansBold
+    navBtn1.Parent = navFrame
+
+    local navBtn2 = Instance.new("TextButton")
+    navBtn2.Size = UDim2.new(1, 0, 0, 50)
+    navBtn2.Position = UDim2.new(0, 0, 0, 50)
+    navBtn2.BackgroundTransparency = 1
+    navBtn2.Text = "معلومات"
+    navBtn2.TextColor3 = White
+    navBtn2.Font = Enum.Font.SourceSansBold
+    navBtn2.Parent = navFrame
+
+    page1.Position = UDim2.new(0, 100, 0, 35)
+    page1.Size = UDim2.new(1, -100, 1, -35)
+    page2.Position = UDim2.new(0, 100, 0, 35)
+    page2.Size = UDim2.new(1, -100, 1, -35)
+
+    navBtn1.MouseButton1Click:Connect(function()
+        page1.Visible = true
+        page2.Visible = false
+        navBtn1.TextColor3 = Purple
+        navBtn2.TextColor3 = White
+    end)
+
+    navBtn2.MouseButton1Click:Connect(function()
+        page1.Visible = false
+        page2.Visible = true
+        navBtn1.TextColor3 = White
+        navBtn2.TextColor3 = Purple
+    end)
+
+    local rightsBtn = Instance.new("TextButton")
+    rightsBtn.Size = UDim2.new(0, 250, 0, 30)
+    rightsBtn.Position = UDim2.new(0, 10, 1, -40)
+    rightsBtn.BackgroundTransparency = 1
+    rightsBtn.Text = "Speed Script by Eilia | TG @Saharrmohamed2005"
+    rightsBtn.TextColor3 = Purple
+    rightsBtn.Font = Enum.Font.SourceSansBold
+    rightsBtn.TextSize = 12
+    rightsBtn.TextXAlignment = Enum.TextXAlignment.Left
+    rightsBtn.Parent = menuGui
+
+    rightsBtn.MouseButton1Click:Connect(function()
+        mainFrame.Visible = not mainFrame.Visible
+    end)
+
+    btnClose.MouseButton1Click:Connect(function()
+        local hum = player.Character and player.Character:FindFirstChild("Humanoid")
+        if hum then
+            hum.WalkSpeed = 16
+            hum.JumpPower = 50
+        end
+        game.Workspace.Gravity = 196.2
+        for _, p in ipairs(game.Players:GetPlayers()) do
+            if p.Character then
+                local hl = p.Character:FindFirstChild("ESP_Highlight")
+                local box = p.Character:FindFirstChild("ESP_Box")
+                if hl then hl:Destroy() end
+                if box then box:Destroy() end
+            end
+        end
+        menuGui:Destroy()
+    end)
+    
+    btnMin.MouseButton1Click:Connect(function()
+        mainFrame.Visible = false
+    end)
+end
+
+showSplash()
+createMenu()
